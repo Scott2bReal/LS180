@@ -1,5 +1,5 @@
--- ALTER TABLE celebrities
--- RENAME TO singers;
+ALTER TABLE celebrities
+RENAME TO singers;
 
 -- SELECT * FROM singers
 DELETE FROM singers

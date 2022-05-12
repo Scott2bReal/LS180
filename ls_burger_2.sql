@@ -3,8 +3,8 @@
 CREATE TABLE orders(
     id serial,
     customer_name varchar(100) NOT NULL,
-    customer_email varchar(150),
-    customer_loyalty_points int,
+    customer_email varchar(50),
+    customer_loyalty_points int DEFAULT 0,
     burger varchar(50),
     side varchar(50),
     drink varchar(50),

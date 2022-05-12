@@ -11,11 +11,13 @@ INSERT INTO celebrities (
 )
 VALUES (
     'Prince',
-    'Singer, Songwriter', 'Actor', 'Musician',
+    NULL,
+    'Singer, Songwriter, Actor, Musician',
     '1958-06-07',
     true
 ), (
     'Madonna',
+    NULL,
     'Singer, Actress',
     '1958-08-16',
     false
