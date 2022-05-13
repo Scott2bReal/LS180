@@ -1,18 +1,18 @@
 CREATE TABLE orders (
-  id serial PRIMARY KEY,
-  customer_id int NOT NULL,
-  order_status varchar(20),
-  FOREIGN KEY(customer_id) REFERENCES customers(id)
-  ON DELETE CASCADE
+    id serial PRIMARY KEY,
+    customer_id int NOT NULL,
+    order_status varchar(20),
+    FOREIGN KEY(customer_id) REFERENCES customers(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE order_items (
-  id serial PRIMARY KEY,
-  order_id int NOT NULL,
-  product_id int NOT NULL,
-  FOREIGN KEY(order_id) REFERENCES orders(id),
-  FOREIGN KEY(product_id) REFERENCES products(id)
-  ON DELETE CASCADE
+    id serial PRIMARY KEY,
+    order_id int NOT NULL,
+    product_id int NOT NULL,
+    FOREIGN KEY(order_id) REFERENCES orders(id),
+    FOREIGN KEY(product_id) REFERENCES products(id)
+    ON DELETE CASCADE
 );
 
 -- James
