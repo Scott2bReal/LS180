@@ -6,15 +6,15 @@ address record. Populate the tables with the appropriate data from the current
 orders table. */
 
 CREATE TABLE customers (
-  id serial UNIQUE,
-  email_id int UNIQUE NOT NULL,
-  PRIMARY KEY (id)
+    id serial UNIQUE,
+    email_id int UNIQUE NOT NULL,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE email_addresses (
-  id serial UNIQUE,
-  customer_id int UNIQUE NOT NULL,
-  PRIMARY KEY (id)
+    id serial UNIQUE,
+    customer_id int UNIQUE NOT NULL,
+    PRIMARY KEY (id)
 );
 
 ALTER TABLE customers
