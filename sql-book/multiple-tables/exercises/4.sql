@@ -6,22 +6,13 @@ address record. Populate the tables with the appropriate data from the current
 orders table. */
 
 CREATE TABLE customers (
-    id serial UNIQUE,
-    email_id int UNIQUE NOT NULL,
-    PRIMARY KEY (id)
+    id serial PRIMARY KEY,
+    customer_name varchar(100)
 );
 
 CREATE TABLE email_addresses (
-    id serial UNIQUE,
-    customer_id int UNIQUE NOT NULL,
-    PRIMARY KEY (id)
+  customer_id integer PRIMARY KEY,
+  customer_email varchar(50),
+  FOREIGN KEY(customer_id) REFERENCES customers(id)
+  ON DELETE CASCADE
 );
-
-ALTER TABLE customers
-ADD FOREIGN KEY(email_id)
-REFERENCES email_addresses(id)
-ON DELETE CASCADE;
-
-ALTER TABLE email_addresses
-ADD FOREIGN KEY(customer_id) REFERENCES customers(id)
-ON DELETE CASCADE;
