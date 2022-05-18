@@ -7,6 +7,6 @@ SELECT s.first_name, s.last_name, a.album_name, a.release_date
 FROM singers s
 JOIN albums a
 ON a.singer_id = s.id
-WHERE a.release_date LIKE '%198%'
+WHERE '[1980-01-01, 1989-12-31]'::daterange @> a.release_date
 AND s.deceased = false
-ORDER BY s.date_of_birth;
+ORDER BY s.date_of_birth DESC;
