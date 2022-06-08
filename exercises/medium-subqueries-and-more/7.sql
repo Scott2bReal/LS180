@@ -8,4 +8,5 @@ know:
 'Painting', 100.00, 250.00
 */
 
-SELECT ROW(items.*, 'Painting', 100.00, 250.00) FROM items WHERE = ROW;
+SELECT id AS "ID of Painting" FROM items
+WHERE ROW(items.*) = ROW(items.id, 'Painting', 100.00, 250.00);
