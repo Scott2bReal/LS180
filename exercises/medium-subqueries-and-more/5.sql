@@ -15,6 +15,7 @@ Your output should look like this:
 (1 row)
 */
 
-SELECT max(max) FROM (
-  SELECT count(DISTINCT bidder_id) FROM bids
-) AS max LIMIT 1;
+SELECT max(bids_made.count) FROM (
+  SELECT COUNT(bidder_id) FROM bids 
+  GROUP BY bidder_id
+) AS bids_made;
