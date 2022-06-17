@@ -214,7 +214,7 @@
   - **Conceptual** - This is the highest level of schema, and broadly describes
     the relationships between entities in a database.
 
-  - **Logical** - This is a level in between the other two, can combines
+  - **Logical** - This is a level in between the other two, can combine
     elements of both. Schemas are usually designed starting at the conceptual
     level and then implemented at the physical level, while the logical level
     is not usually fully realized. It is often skipped.
